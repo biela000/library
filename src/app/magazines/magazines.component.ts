@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
+import {Photo} from "../types/Photo";
 
 @Component({
   selector: 'app-magazines',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./magazines.component.scss']
 })
 export class MagazinesComponent {
+  @Input()
+  public photos?: Photo[];
 
 }

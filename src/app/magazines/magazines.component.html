@@ -1,1 +1,8 @@
-<p>magazines works!</p>
+<ul>
+  <li *ngFor="let photo of photos">
+    <a routerLink="./{{photo.forTitle}}">
+      <img [src]="photo.url" [alt]="photo.forTitle">
+      <h2>{{photo.forTitle}}</h2>
+    </a>
+  </li>
+</ul>

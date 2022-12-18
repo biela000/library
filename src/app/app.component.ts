@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {MagazinesService} from "./magazines.service";
+import {MagazinesServiceOutput} from "./types/MagazinesServiceOutput";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'library';
+  public library: MagazinesServiceOutput = this.magazinesService.getMagazines();
+  constructor(private magazinesService: MagazinesService) { }
 }

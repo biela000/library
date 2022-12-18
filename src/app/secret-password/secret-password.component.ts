@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./secret-password.component.scss']
 })
 export class SecretPasswordComponent {
-
+  public earnings: string = '';
+  public handleEarningsChange(earnings: string): void {
+    this.earnings = earnings;
+  }
 }

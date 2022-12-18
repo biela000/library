@@ -1,5 +1,6 @@
-export type Magazine = {
+export type MagazineIssue = {
   id: string,
+  issue: string,
   title: string,
   publisher: string,
   format: string,

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-secret-password-output',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./secret-password-output.component.scss']
 })
 export class SecretPasswordOutputComponent {
-
+  @Input() public earnings?: string;
 }
