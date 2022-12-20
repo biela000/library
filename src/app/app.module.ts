@@ -15,6 +15,10 @@ import { IssueSetComponent } from './issue-set/issue-set.component';
 import { IssueComponent } from './issue/issue.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { MagazinesComponent } from './magazines/magazines.component';
+import { MagazineLinComponent } from './magazine-lin/magazine-lin.component';
+import { LibraryHeaderComponent } from './library-header/library-header.component';
+import { YearComponent } from './year/year.component';
+import { MagazineHeaderComponent } from './magazine-header/magazine-header.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,11 @@ import { MagazinesComponent } from './magazines/magazines.component';
     IssueSetComponent,
     IssueComponent,
     SearchBarComponent,
-    MagazinesComponent
+    MagazinesComponent,
+    MagazineLinComponent,
+    LibraryHeaderComponent,
+    YearComponent,
+    MagazineHeaderComponent
   ],
   imports: [
     BrowserModule,

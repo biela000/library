@@ -1,0 +1,28 @@
+@import "../_config.scss";
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 30vw;
+  min-width: 32em;
+  align-items: center;
+  background-color: lighten($charcoal, 5%);
+  border-radius: $sm-pd;
+  padding: 0 $lg-pd * 2;
+  transition: background-color 0.5s;
+  text-decoration: none;
+  border-right: $md-pd solid $apricot;
+
+  .mag-title {
+    flex-grow: 1;
+    text-align: center;
+    font-size: $lg-pd;
+    color: $text-color;
+
+
+  }
+
+  &:hover {
+    background-color: $opal;
+  }
+}

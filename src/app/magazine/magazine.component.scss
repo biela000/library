@@ -1,0 +1,10 @@
+@import "../_config.scss";
+
+.container {
+  display: flex;
+  width: max-content;
+  margin: auto;
+  gap: $lg-pd;
+  padding-top: $lg-pd;
+  list-style-type: none;
+}

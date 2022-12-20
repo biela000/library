@@ -1,0 +1,14 @@
+@import "../config.scss";
+
+.container {
+  margin: auto;
+  width: max-content;
+  text-align: center;
+  padding-top: $lg-pd;
+  text-transform: uppercase;
+
+  .main-header {
+    margin-top: $sm-pd;
+    font-size: $lg-pd * 1.5;
+  }
+}

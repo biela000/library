@@ -1,1 +1,7 @@
-<p>magazine works!</p>
+<app-magazine-header [magazineName]="magazine?.title"></app-magazine-header>
+<ul class="container">
+  <li class="year-container" *ngFor="let issueDate of magazine?.issues">
+    <app-year [year]="issueDate"></app-year>
+  </li>
+</ul>
+

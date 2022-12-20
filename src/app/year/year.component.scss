@@ -1,0 +1,15 @@
+@import "../_config.scss";
+
+.year {
+  text-decoration: none;
+  color: $text-color;
+  background-color: lighten($charcoal, 5%);
+  padding: $sm-pd $md-pd;
+  border-radius: $sm-pd;
+  transition: background-color 0.5s;
+  font-size: $lg-pd;
+
+  &:hover {
+    background-color: $opal;
+  }
+}

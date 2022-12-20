@@ -9,5 +9,4 @@ import {Photo} from "../types/Photo";
 export class MagazinesComponent {
   @Input()
   public photos?: Photo[];
-
 }

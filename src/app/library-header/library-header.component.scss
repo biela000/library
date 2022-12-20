@@ -1,0 +1,11 @@
+@import "../_config.scss";
+
+* {
+  text-align: center;
+  padding-top: $sm-pd;
+  text-transform: uppercase;
+
+  &:first-letter {
+    color: $apricot;
+  }
+}

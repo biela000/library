@@ -1,4 +1,6 @@
 import {Component, EventEmitter, Input, Output, OnInit} from '@angular/core';
+import {Router} from "@angular/router";
+import {AuthService} from "../auth.service";
 
 @Component({
   selector: 'app-secret-password-input',
@@ -9,6 +11,7 @@ export class SecretPasswordInputComponent implements OnInit {
   @Input() public earnings?: string;
   @Output() public earningsChange = new EventEmitter<string>();
   public earningsCopy: string = '';
+  constructor(private router: Router, private authService: AuthService) { }
   ngOnInit(): void {
     this.earningsCopy = this.earnings || '';
   }
@@ -21,5 +24,9 @@ export class SecretPasswordInputComponent implements OnInit {
 
   public handleKeyUp(): void {
     this.earningsChange.emit(this.earningsCopy);
+    if (this.earnings === '666.666') {
+      this.authService.setIsAuthenticated(true);
+      this.router.navigateByUrl('/library');
+    }
   }
 }

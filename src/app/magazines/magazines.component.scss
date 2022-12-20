@@ -1,0 +1,12 @@
+@import "../_config.scss";
+
+.magazines {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: max-content;
+  padding: $lg-pd 0;
+  margin: 0 auto;
+  list-style-type: none;
+  gap: $lg-pd;
+}

@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
-import {MagazinesService} from "./magazines.service";
-import {MagazinesServiceOutput} from "./types/MagazinesServiceOutput";
+import {ActivatedRoute, Router} from "@angular/router";
+import {AuthService} from "./auth.service";
 
 @Component({
   selector: 'app-root',
@@ -8,6 +8,12 @@ import {MagazinesServiceOutput} from "./types/MagazinesServiceOutput";
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  public library: MagazinesServiceOutput = this.magazinesService.getMagazines();
-  constructor(private magazinesService: MagazinesService) { }
+  constructor(private router: Router, private route: ActivatedRoute, private authService: AuthService) {
+    this.authService.isAuthenticated = document.cookie.split('=')[1] === 'true';
+  }
+  public handleRouteChange() {
+    if (!this.authService.isAuthenticated) {
+      this.router.navigateByUrl('/');
+    }
+  }
 }
